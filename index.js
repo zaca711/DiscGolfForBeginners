@@ -10,23 +10,35 @@ app.set("view engine", "ejs");
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("DiscGolf");
 });
 
-app.get("/resume.html", (req, res) => {
-    res.render("resume");
+app.get("/contact.html", (req, res) => {
+    res.render("contact");
 });  
 
-app.get("/blog.html", (req, res) => {
-    res.render("blog");
+app.get("/DiscBlog.html", (req, res) => {
+    res.render("DiscBlog");
 });
 
-app.get("/index.html", (req, res) => {
-  res.render("index");
+app.get("/DiscGolf.html", (req, res) => {
+  res.render("DiscGolf");
 });
 
-app.get("/facts.html", (req, res) => {
-  res.render("facts");
+app.get("/DistanceDriver.html", (req, res) => {
+  res.render("DistanceDriver");
+});  
+
+app.get("/FairwayDriver.html", (req, res) => {
+  res.render("FairwayDriver");
+});  
+
+app.get("/Midrange.html", (req, res) => {
+  res.render("Midrange");
+});  
+
+app.get("/Putter.html", (req, res) => {
+  res.render("Putter");
 });  
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
